@@ -23,10 +23,8 @@ export class GetUserComponent implements OnInit {
   }
   addUser() {
     const obj = {};
-    obj['data'] = [];
-    obj['index'] = true;
-    console.log('obj', obj);
-    this.util.setuserData(obj);
+    const data = [];
+    this.util.updateUserDetailDataSubscription(data);
     this.router.navigate(['/addUser']);
   }
   editUserDetail(userData: any, index: any) {

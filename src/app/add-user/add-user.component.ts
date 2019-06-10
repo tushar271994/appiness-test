@@ -40,7 +40,7 @@ export class AddUserComponent implements OnInit, OnDestroy {
         address: ['', Validators.required]
       });
 
-      if (this.result) {
+      if (this.result && this.result.email) {
         this.update = false;
         this.registrationForm.setValue({
           firstName: this.result.firstName,
